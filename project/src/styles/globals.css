@@ -1,0 +1,25 @@
+/* Add LTR direction enforcement for all text inputs globally */
+html, body {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: plaintext;
+}
+
+/* Apply LTR to all input elements */
+input, 
+textarea, 
+[contenteditable], 
+.force-ltr {
+  direction: ltr !important;
+  text-align: left !important;
+  unicode-bidi: plaintext !important;
+}
+
+/* Target specific elements that might cause RTL override */
+p, div, span, h1, h2, h3, h4, h5, h6, li, ul, ol {
+  direction: ltr !important;
+  unicode-bidi: plaintext !important;
+  text-align: left !important;
+}
+
+/* Rest of your existing CSS below */ 

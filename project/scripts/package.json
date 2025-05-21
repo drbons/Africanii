@@ -1,0 +1,16 @@
+{
+  "name": "boltafricanii-firebase-scripts",
+  "version": "1.0.0",
+  "description": "Scripts to upload data to Firebase for Bolt African Business Directory",
+  "main": "index.js",
+  "scripts": {
+    "upload-data": "node upload-to-firebase.js",
+    "upload-assets": "node upload-assets.js",
+    "upload-all": "node index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^11.10.1",
+    "mkdirp": "^3.0.1"
+  }
+} 

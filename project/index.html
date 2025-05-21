@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="direction" content="ltr" />
+    <title>Africanii</title>
+    <style>
+      html, body {
+        direction: ltr;
+        text-align: left;
+        unicode-bidi: plaintext;
+      }
+      
+      input, textarea, [contenteditable] {
+        direction: ltr !important;
+        text-align: left !important;
+        unicode-bidi: plaintext !important;
+      }
+      
+      .loading-indicator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        direction: ltr;
+        text-align: left;
+      }
+      .spinner {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        border-top: 4px solid #3498db;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .debug-message {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        font-family: monospace;
+        max-width: 600px;
+        white-space: pre-wrap;
+        direction: ltr;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body dir="ltr" style="direction: ltr; text-align: left;">
+    <div id="root" dir="ltr">
+      <div class="loading-indicator">
+        <div class="spinner"></div>
+        <h2>Loading Application...</h2>
+        <p>If this persists, there might be an issue with the application.</p>
+        <div id="debug-message" class="debug-message">Initializing...</div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Debug script
+      setTimeout(() => {
+        const debugEl = document.getElementById('debug-message');
+        if (debugEl && debugEl.parentNode) {
+          debugEl.textContent = 'App is taking longer than expected to load. Possible issues with React initialization or routing.';
+        }
+      }, 5000);
+      
+      // Enforce LTR direction
+      document.documentElement.setAttribute('dir', 'ltr');
+      document.body.setAttribute('dir', 'ltr');
+      document.body.style.direction = 'ltr';
+      document.body.style.textAlign = 'left';
+    </script>
+  </body>
+</html>

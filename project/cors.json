@@ -1,0 +1,28 @@
+[
+  {
+    "origin": [
+      "https://boltafricanii.web.app",
+      "http://localhost:5173",
+      "http://localhost:3000",
+      "https://boltafricanii.firebaseapp.com"
+    ],
+    "method": ["GET", "POST", "PUT", "DELETE", "HEAD"],
+    "maxAgeSeconds": 3600,
+    "responseHeader": [
+      "Content-Type",
+      "Content-Length",
+      "Content-Encoding",
+      "Content-Disposition",
+      "Content-Range",
+      "Content-Language",
+      "Cache-Control",
+      "Expires",
+      "Last-Modified",
+      "ETag",
+      "Access-Control-Allow-Origin",
+      "Access-Control-Allow-Methods",
+      "Access-Control-Allow-Headers",
+      "Access-Control-Expose-Headers"
+    ]
+  }
+] 

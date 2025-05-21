@@ -1,0 +1,3 @@
+@echo off
+echo Starting Vite development server with unrestricted host access...
+npx vite --host --port 3001 
